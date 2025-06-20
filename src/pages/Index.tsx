@@ -32,21 +32,28 @@ const IndexContent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-700 to-red-800">
-      {/* Background decoration with corporate pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23FFC107%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+      {/* Background decoration with subtle pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23DC2626%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
-      {/* Header */}
-      <div className="relative z-10 pt-8 pb-4">
+      {/* Header with logo */}
+      <div className="relative z-10 pt-6 pb-4">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-white">
-              TotalContact AI Calls
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/lovable-uploads/ecc3b0c3-30fc-4572-83bb-aca3c6915f48.png" 
+                alt="Escuinapa Logo" 
+                className="h-12 w-auto"
+              />
+              <div className="text-2xl font-bold text-gray-800">
+                TotalContact AI Calls
+              </div>
             </div>
             <Button
               variant="outline"
               onClick={toggleLanguage}
-              className="bg-yellow-500/20 border-yellow-400/40 text-white hover:bg-yellow-500/30 hover:border-yellow-400/60"
+              className="bg-white/80 border-red-200 text-gray-700 hover:bg-red-50 hover:border-red-300 hover:text-red-700"
             >
               {language === 'en' ? 'ES' : 'EN'}
             </Button>
@@ -56,14 +63,14 @@ const IndexContent = () => {
 
       {/* Main content */}
       <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-4">
-        <Card className="w-full max-w-md bg-white/10 backdrop-blur-lg border-yellow-400/20 shadow-2xl">
+        <Card className="w-full max-w-md bg-white/95 backdrop-blur-sm border-gray-200 shadow-xl shadow-red-500/10">
           <CardContent className="p-8 text-center">
             {/* Title and subtitle */}
             <div className="mb-8">
-              <h1 className="text-3xl font-bold text-white mb-4">
+              <h1 className="text-3xl font-bold text-gray-800 mb-4">
                 {t('title')}
               </h1>
-              <p className="text-yellow-100 text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed">
                 {t('subtitle')}
               </p>
             </div>
@@ -73,14 +80,14 @@ const IndexContent = () => {
               <div className="relative mx-auto w-32 h-32 mb-6">
                 <div className={`absolute inset-0 rounded-full transition-all duration-500 ${
                   isRecording 
-                    ? 'bg-gradient-to-r from-red-500 to-red-600 animate-pulse shadow-lg shadow-red-500/50' 
-                    : 'bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-lg shadow-yellow-500/50'
+                    ? 'bg-gradient-to-r from-red-500 to-red-600 animate-pulse shadow-lg shadow-red-500/30' 
+                    : 'bg-gradient-to-r from-gray-300 to-gray-400 shadow-lg shadow-gray-400/30'
                 }`}></div>
-                <div className="absolute inset-2 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
+                <div className="absolute inset-2 rounded-full bg-white/90 backdrop-blur flex items-center justify-center">
                   <div className={`w-12 h-12 rounded-full transition-all duration-300 ${
                     isRecording 
                       ? 'bg-red-600 animate-pulse shadow-inner' 
-                      : 'bg-yellow-600 shadow-inner'
+                      : 'bg-gray-500 shadow-inner'
                   }`}></div>
                 </div>
                 
@@ -111,7 +118,7 @@ const IndexContent = () => {
             </div>
 
             {/* Instructions */}
-            <div className="text-yellow-100/80 text-sm">
+            <div className="text-gray-500 text-sm">
               {isRecording 
                 ? "Click the button to end your call" 
                 : "Click the button above to start your AI voice call"
@@ -124,7 +131,7 @@ const IndexContent = () => {
       {/* Footer */}
       <div className="relative z-10 pb-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-yellow-100/60 text-sm">
+          <p className="text-gray-400 text-sm">
             Powered by TotalContact AI SDK
           </p>
         </div>

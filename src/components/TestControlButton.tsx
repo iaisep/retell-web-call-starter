@@ -136,7 +136,7 @@ const TestControlButton: React.FC<TestControlButtonProps> = ({
       <Button 
         onClick={handleClick}
         variant="outline"
-        className="w-40 bg-white text-red-500 border-red-500 hover:bg-red-50 transition-all duration-300 transform hover:scale-105"
+        className="w-40 bg-white text-red-600 border-red-500 hover:bg-red-50 transition-all duration-300 transform hover:scale-105"
         disabled={endingCall}
       >
         <Square className="mr-2 h-4 w-4" />
@@ -150,7 +150,7 @@ const TestControlButton: React.FC<TestControlButtonProps> = ({
       onClick={handleClick}
       variant="default"
       disabled={isLoading}
-      className="w-40 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+      className="w-40 bg-red-600 hover:bg-red-700 text-white transition-all duration-300 transform hover:scale-105 shadow-lg"
     >
       {t('test')}
     </Button>

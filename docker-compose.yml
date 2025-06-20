@@ -1,0 +1,29 @@
+
+version: '3.8'
+
+services:
+  totalcontact-ai-calls:
+    build: .
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    container_name: totalcontact-ai-calls
+    
+  # Optional: Development service
+  totalcontact-ai-calls-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    container_name: totalcontact-ai-calls-dev
+    profiles:
+      - dev

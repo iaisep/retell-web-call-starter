@@ -32,9 +32,9 @@ const IndexContent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-700 to-red-800">
+      {/* Background decoration with corporate pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23FFC107%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
       {/* Header */}
       <div className="relative z-10 pt-8 pb-4">
@@ -46,7 +46,7 @@ const IndexContent = () => {
             <Button
               variant="outline"
               onClick={toggleLanguage}
-              className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+              className="bg-yellow-500/20 border-yellow-400/40 text-white hover:bg-yellow-500/30 hover:border-yellow-400/60"
             >
               {language === 'en' ? 'ES' : 'EN'}
             </Button>
@@ -56,14 +56,14 @@ const IndexContent = () => {
 
       {/* Main content */}
       <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-4">
-        <Card className="w-full max-w-md bg-white/10 backdrop-blur-lg border-white/20 shadow-2xl">
+        <Card className="w-full max-w-md bg-white/10 backdrop-blur-lg border-yellow-400/20 shadow-2xl">
           <CardContent className="p-8 text-center">
             {/* Title and subtitle */}
             <div className="mb-8">
               <h1 className="text-3xl font-bold text-white mb-4">
                 {t('title')}
               </h1>
-              <p className="text-white/80 text-lg leading-relaxed">
+              <p className="text-yellow-100 text-lg leading-relaxed">
                 {t('subtitle')}
               </p>
             </div>
@@ -73,14 +73,14 @@ const IndexContent = () => {
               <div className="relative mx-auto w-32 h-32 mb-6">
                 <div className={`absolute inset-0 rounded-full transition-all duration-500 ${
                   isRecording 
-                    ? 'bg-gradient-to-r from-red-500 to-pink-500 animate-pulse' 
-                    : 'bg-gradient-to-r from-blue-500 to-purple-500'
+                    ? 'bg-gradient-to-r from-red-500 to-red-600 animate-pulse shadow-lg shadow-red-500/50' 
+                    : 'bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-lg shadow-yellow-500/50'
                 }`}></div>
                 <div className="absolute inset-2 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
                   <div className={`w-12 h-12 rounded-full transition-all duration-300 ${
                     isRecording 
-                      ? 'bg-red-500 animate-pulse' 
-                      : 'bg-blue-500'
+                      ? 'bg-red-600 animate-pulse shadow-inner' 
+                      : 'bg-yellow-600 shadow-inner'
                   }`}></div>
                 </div>
                 
@@ -111,7 +111,7 @@ const IndexContent = () => {
             </div>
 
             {/* Instructions */}
-            <div className="text-white/60 text-sm">
+            <div className="text-yellow-100/80 text-sm">
               {isRecording 
                 ? "Click the button to end your call" 
                 : "Click the button above to start your AI voice call"
@@ -124,7 +124,7 @@ const IndexContent = () => {
       {/* Footer */}
       <div className="relative z-10 pb-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-white/40 text-sm">
+          <p className="text-yellow-100/60 text-sm">
             Powered by TotalContact AI SDK
           </p>
         </div>

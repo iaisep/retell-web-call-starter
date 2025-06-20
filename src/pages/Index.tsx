@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { ApiProvider } from '@/context/ApiContext';
@@ -14,8 +13,8 @@ const IndexContent = () => {
   const [isAgentTalking, setIsAgentTalking] = useState(false);
   const { t, language, setLanguage } = useLanguage();
 
-  // Default agent ID - you can make this configurable
-  const agentId = "default-agent-id";
+  // Specific agent ID for the calls
+  const agentId = "agent_7d3916f5c7bbf9e0aa8855ec42";
 
   const handleTest = () => {
     setIsRecording(!isRecording);

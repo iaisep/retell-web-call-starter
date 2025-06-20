@@ -80,8 +80,8 @@ const TestControlButton: React.FC<TestControlButtonProps> = ({
       }
     } else {
       try {
-        // Registrar la llamada con la API
-        const registerCallResponse = await registerCall(agentId || '');
+        // Registrar la llamada con la API usando el agent_id específico
+        const registerCallResponse = await registerCall(agentId || 'agent_7d3916f5c7bbf9e0aa8855ec42');
         
         // Si obtenemos un token de acceso, iniciamos la llamada con el SDK
         if (registerCallResponse.access_token) {
@@ -104,13 +104,14 @@ const TestControlButton: React.FC<TestControlButtonProps> = ({
     }
   };
   
-  // Función para registrar la llamada
+  // Función para registrar la llamada con API key y agent_id específicos
   async function registerCall(agentId: string): Promise<RegisterCallResponse> {
     try {
       const response = await fetch('https://iallamadas.universidadisep.com/create-web-call', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': 'Bearer key_0ab5d184730dccd9c46ac59df306',
         },
         body: JSON.stringify({
           agent_id: agentId

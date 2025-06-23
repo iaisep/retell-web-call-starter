@@ -15,7 +15,7 @@ const IndexContent = () => {
   const { t, language, setLanguage } = useLanguage();
 
   // Specific agent ID for the calls
-  const agentId = "agent_7d3916f5c7bbf9e0aa8855ec42";
+  const agentId = "agent_c509d3e6ffa454943dbe711866";
 
   const handleTest = () => {
     setIsRecording(!isRecording);

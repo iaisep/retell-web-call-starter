@@ -16,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Corporate red accent color */
-    --primary: 0 84% 55%;
+    /* BIOFOM green accent color */
+    --primary: 142 69% 45%;
     --primary-foreground: 0 0% 98%;
 
     /* Corporate yellow secondary */
@@ -60,8 +60,8 @@
     --popover: 0 5% 8%;
     --popover-foreground: 0 0% 95%;
 
-    /* Corporate red for dark mode */
-    --primary: 0 84% 65%;
+    /* BIOFOM green for dark mode */
+    --primary: 142 69% 55%;
     --primary-foreground: 0 0% 5%;
 
     /* Corporate yellow for dark mode */

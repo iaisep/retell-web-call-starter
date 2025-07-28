@@ -42,8 +42,8 @@ const IndexContent = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
               <img 
-                src="/lovable-uploads/ecc3b0c3-30fc-4572-83bb-aca3c6915f48.png" 
-                alt="Escuinapa Logo" 
+                src="/lovable-uploads/dfec7981-c597-45a7-b889-9a6d04b51fbd.png" 
+                alt="BIOFOM Logo" 
                 className="h-12 w-auto"
               />
               <div className="text-2xl font-bold text-gray-800">

@@ -150,7 +150,7 @@ const TestControlButton: React.FC<TestControlButtonProps> = ({
       onClick={handleClick}
       variant="default"
       disabled={isLoading}
-      className="w-40 bg-red-600 hover:bg-red-700 text-white transition-all duration-300 transform hover:scale-105 shadow-lg"
+      className="w-40 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-lg"
     >
       {t('test')}
     </Button>

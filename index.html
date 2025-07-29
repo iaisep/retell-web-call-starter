@@ -17,26 +17,22 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <script>
-      (function(d,t) {
-        var BASE_URL="https://chatwoot.totalcontact.com.mx";
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=BASE_URL+"/packs/js/sdk.js";
-        g.async = true;
-        s.parentNode.insertBefore(g,s);
-        g.onload=function(){
-          console.log('Chatwoot SDK loaded');
-          window.chatwootSDK.run({
-            websiteToken: 'tndxfHS4NUHKCcaKCVGY8ivZ',
-            baseUrl: BASE_URL
-          });
-          console.log('Chatwoot SDK initialized');
-        }
-        g.onerror = function() {
-          console.error('Failed to load Chatwoot SDK');
-        }
-      })(document,"script");
-    </script>
+<script>
+  (function(d,t) {
+    var BASE_URL="https://chatwoot2.universidadisep.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'aTQwzGtRucU93bF9AXJM5Ji9',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
+
   </head>
 
   <body>

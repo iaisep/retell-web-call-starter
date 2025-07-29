@@ -25,10 +25,15 @@
         g.async = true;
         s.parentNode.insertBefore(g,s);
         g.onload=function(){
+          console.log('Chatwoot SDK loaded');
           window.chatwootSDK.run({
             websiteToken: 'tndxfHS4NUHKCcaKCVGY8ivZ',
             baseUrl: BASE_URL
-          })
+          });
+          console.log('Chatwoot SDK initialized');
+        }
+        g.onerror = function() {
+          console.error('Failed to load Chatwoot SDK');
         }
       })(document,"script");
     </script>

@@ -81,7 +81,7 @@ const TestControlButton: React.FC<TestControlButtonProps> = ({
     } else {
       try {
         // Registrar la llamada con la API usando el agent_id específico
-        const registerCallResponse = await registerCall(agentId || 'agent_7d3916f5c7bbf9e0aa8855ec42');
+        const registerCallResponse = await registerCall(agentId || 'agent_97f8c1c88a6e5c964a98b8a582');
         
         // Si obtenemos un token de acceso, iniciamos la llamada con el SDK
         if (registerCallResponse.access_token) {

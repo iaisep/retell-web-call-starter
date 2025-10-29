@@ -114,7 +114,7 @@ const TestControlButton: React.FC<TestControlButtonProps> = ({
           'Authorization': 'Bearer key_0ab5d184730dccd9c46ac59df306',
         },
         body: JSON.stringify({
-          agent_id: agentId
+          agent_id: 'agent_97f8c1c88a6e5c964a98b8a582'
           // Se pueden añadir metadata y retell_llm_dynamic_variables si es necesario
         })
       });

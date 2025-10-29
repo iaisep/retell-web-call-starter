@@ -107,7 +107,7 @@ const TestControlButton: React.FC<TestControlButtonProps> = ({
   // Función para registrar la llamada con API key y agent_id específicos
   async function registerCall(agentId: string): Promise<RegisterCallResponse> {
     try {
-      const response = await fetch('https://iallamadas.universidadisep.com/create-web-call', {
+      const response = await fetch('https://iallamadas.totalcontact.com.mx/create-web-call', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
